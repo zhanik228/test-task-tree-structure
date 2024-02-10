@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Task</title>
+</head>
+<style>
+    *, *::after, *::before {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    body, html {
+        height: 100%;
+    }
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    ul {
+        padding-inline-start: 10px;
+        list-style-type: none;
+    }
+    li {
+        padding: 5px 0;
+    }
+    .rightArrow {
+        position: relative;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .rightArrow::before {
+        content: '➡️';
+        position: absolute;
+        left: -25px;
+    }
+    .arrowDown {
+        position: relative;
+        cursor: pointer;
+        padding: 10px;
+    }
+    .arrowDown::before {
+        content: '⬆️';
+        position: absolute;
+        left: -25px;
+    }
+    .nested {
+        position: relative;
+        display: none;
+    }
+    .nested-item {
+        position: relative;
+    }
+    .nested-item::before {
+        content: '📁';
+        position: absolute;
+        left: -25px;
+    }
+    .nested.active {
+        display: block;
+    }
+    .active {
+        display: block;
+    }
+</style>
+<body>
+    <main>
+        <div class="services"></div>
+    </main>
+<script src="index.js"></script>
+</body>
+</html>
